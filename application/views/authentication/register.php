@@ -5,7 +5,7 @@
 	<!-- /.login-logo -->
 	<div class="login-box-body">
 		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
-		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
+		<form method="post" action="<?php echo base_url('auth/do_register'); ?>" role="register">
 			<div class="form-group has-feedback">
 				<input type="email" name="email" class="form-control" required minlength="5" placeholder="Email" />
 				<span class="glyphicon  glyphicon-envelope form-control-feedback"></span>
@@ -26,8 +26,8 @@
 					<button type="submit" name="submit" value="login" class="btn btn-primary btn-block btn-flat"><i class="fa fa-sign-in" aria-hidden="true"></i> Masuk</button>
 				</div>
 			</div>
-			
-			<hr>
+
+            <hr>
 
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="form-group text-right">
-			            <a href="<?php echo base_url('auth/register'); ?>"> Daftar Akun</a>
+			            <a href="<?php echo base_url('auth/login'); ?>"> Login</a>
                     </div>
                 </div>
             </div>
@@ -48,16 +48,6 @@
 	<div id="myalert">
 		<?php echo $this->session->flashdata('alert', true); ?>
 	</div>
-	<br>
-	<div class="box box-solid box-info">
-		<div class="box-header">
-				<h3 class="box-title">User Login</h3>
-		</div>
-		<div class="box-body">
-			<b>E-mail</b> : admin@mail.com (administrator) <br>
-			<b>E-mail</b> : member@mail.com (member)<br>
-			<b>Password</b> : password
-	</div> 
 </div>
 
 

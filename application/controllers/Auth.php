@@ -111,9 +111,27 @@ class Auth extends MY_Controller
             $this->template->load('authentication/layouts/template', 'authentication/login', $data);
         }
     }
+
     public function logout()
     {
         $this->session->sess_destroy();
         redirect('auth/login');
+    }
+
+    public function register()
+    {
+        try{
+            $site = $this->Konfigurasi_model->listing();
+            $data = array(
+                'title'     => 'Login | '.$site['nama_website'],
+                'favicon'   => $site['favicon'],
+                'site'      => $site
+            );
+
+            $this->template->load('authentication/layouts/template', 'authentication/register', $data);
+        }
+        catch(Exception $e){
+            throw $e;
+        }
     }
 }
