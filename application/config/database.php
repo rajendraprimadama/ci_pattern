@@ -76,7 +76,7 @@ $query_builder = true;
 
 $db['default'] = array(
     'dsn' => '',
-    'hostname' => '35.229.25.255', #google cloud server
+    'hostname' => '35.229.25.255', #google cloud servers
     'username' => 'dev_system',
     'password' => 'system@20',
     'database' => 'dev_kasir',
